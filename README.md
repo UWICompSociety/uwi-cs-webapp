@@ -34,3 +34,11 @@ Navigate to 127.0.0.1:5000/hello in your browser to check if everything is worki
 
 
 # What we'll be developing? 
+![alt text](https://github.com/UWICompSociety/uwi-cs-webapp/blob/master/mockups/mock1.png "Website mockup1")
+
+![alt text](https://github.com/UWICompSociety/uwi-cs-webapp/blob/master/mockups/mock2.png "Website mockup2")
+
+![alt text](https://github.com/UWICompSociety/uwi-cs-webapp/blob/master/mockups/mock3.png "Website mockup3")
+
+![alt text](https://github.com/UWICompSociety/uwi-cs-webapp/blob/master/mockups/mock4.png "Website mockup4")
+
