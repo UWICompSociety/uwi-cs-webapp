@@ -1,5 +1,5 @@
 # UWI Mona Computing Society's Web App
-TODO: desciption
+TODO: description
 
 # Requirements 
 * python 3.6
