@@ -44,3 +44,19 @@ https://docs.google.com/document/d/1roVEoeM9OlwazfNmCuOj9uCMbijJqFAYO8rB8X7wwh8/
 
 ![alt text](https://github.com/UWICompSociety/uwi-cs-webapp/blob/master/mockups/mock4.png "Website mockup4")
 
+# Contributions
+
+Follow these general guidelines when contributing to the project.
+
+* Fork the repo.
+* Clone your forked repo.
+* Create a branch with the name of the feature or fix you are implementing.
+* Notify group(on whatsapp, just to prevent multiple people doing the same thing) of feature you are working on.
+* Add your feature or fixes.
+* Commit the code to your forked repo and ofcourse newly created branch.
+* When you are done working on your feature or changes and have tested sufficiently, merge your feature/fix branch with your local development branch then create a pull request.
+* Your code will be reviewed, feedback may be given.
+* Your final code will then be merged into the development branch on the main repo and you will be added as a contributor to the project.
+
+# Contributors 
+@daytonallen
