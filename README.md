@@ -59,4 +59,4 @@ Follow these general guidelines when contributing to the project.
 * Your final code will then be merged into the development branch on the main repo and you will be added as a contributor to the project.
 
 # Contributors 
-@daytonallen
+  * [@daytonallen](https://github.com/daytonallen)
