@@ -30,4 +30,4 @@ To run development server.
 
 `flask run`
 
-Navigate to 127.0.0.1:5000/hello to check if everything is working properly.
+Navigate to 127.0.0.1:5000/hello in your browser to check if everything is working properly.
