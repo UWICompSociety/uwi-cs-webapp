@@ -32,6 +32,8 @@ To run development server.
 
 Navigate to 127.0.0.1:5000/hello in your browser to check if everything is working properly.
 
+# Website requirements
+https://docs.google.com/document/d/1roVEoeM9OlwazfNmCuOj9uCMbijJqFAYO8rB8X7wwh8/edit?usp=sharing
 
 # What we'll be developing? 
 ![alt text](https://github.com/UWICompSociety/uwi-cs-webapp/blob/master/mockups/mock1.png "Website mockup1")
