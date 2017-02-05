@@ -4,20 +4,20 @@
         <meta charset="utf-8">
         <title>Home | Computing Society</title>
         <!-- Compiled and minified CSS -->
-        <link rel="stylesheet" href="css/bootstrap.css" media="screen" title="no title" charset="utf-8">
-        <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles/bootstrap.css') }}" media="screen" title="no title" charset="utf-8">
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}" media="screen" title="no title" charset="utf-8">
     </head>
     <body>
         <header>
             <div class="wrapper">
                 <nav>
                     <a class='logo' href="#">
-                        <img src="assets/img/logo.png" alt="logo" />
+                        <img src="{{ url_for('static', filename='assets/img/logo.png') }}" alt="logo" />
                     </a>
-                    <a class="nav-link" href="news.html">News</a>
-                    <a class="nav-link" href="projects.html">Projects</a>
-                    <a class="nav-link" href="stream.html">Live Stream</a>
-                    <a href="forum.html">Forum</a>
+                    <a class="nav-link" href="/news">News</a>
+                    <a class="nav-link" href="/projects">Projects</a>
+                    <a class="nav-link" href="/stream">Live Stream</a>
+                    <a href="/forum">Forum</a>
                     <a class="flat-btn flat-btn-warning" href="#">
                         <span class="glyphicon glyphicon-pencil"></span>
                         SignUp
@@ -96,7 +96,7 @@
                 <div class="col-lg-8">
                     <div class="card">
                         <div class="card-image">
-                            <img src="assets/img/news1.jpg" alt="interest-group">
+                            <img src="{{ url_for('static', filename='assets/img/news1.jpg') }}" alt="interest-group">
                             <div class="card-overlay"></div>
                             <span class="card-title">
                                 Have an Interest?
@@ -111,7 +111,7 @@
                     </div>
                     <div class="card">
                         <div class="card-image">
-                            <img src="assets/img/news2.jpg" alt="interest-group">
+                            <img src="{{ url_for('static', filename='assets/img/news2.jpg') }}" alt="interest-group">
                             <div class="card-overlay"></div>
                             <span class="card-title">
                                 Version Control, Git it?
@@ -128,7 +128,7 @@
                     </div>
                     <div class="card">
                         <div class="card-image">
-                            <img src="assets/img/news3.png" alt="interest-group">
+                            <img src="{{ url_for('static', filename='assets/img/news3.png') }}" alt="interest-group">
                             <div class="card-overlay"></div>
                             <span class="card-title">
                                 Want to hack Google?
@@ -167,7 +167,7 @@
                 <span class="copyright">Copyright © 2016</span>
             </div>
 
-            <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-            <script type="text/javascript" src="js/bootstrap.js"></script>
+            <script src="{{ url_for('static', filename='scripts/jquery-3.1.1.min.js') }}"></script>
+            <script type="text/javascript" src="{{ url_for('static', filename='scripts/bootstrap.js') }}"></script>
     </body>
 </html>
