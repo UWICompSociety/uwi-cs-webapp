@@ -32,6 +32,33 @@ To run development server.
 
 Navigate to 127.0.0.1:5000/hello in your browser to check if everything is working properly.
 
+
+### Windows
+Download and install git which includes git bash. Using git bash as your shell, clone the repo, and navigate to the uwi-cs-webapp folder in your terminal. In that folder, enter 
+
+To create a virtual environment.
+
+`python -m venv ./venv` 
+
+To activate virtual environment.
+
+`./venv/Scripts/activate.bat`
+
+To install all requirements.
+
+`pip install -r requirements.txt`
+
+To run development server.
+
+`export FLASK_CONFIG=development`
+
+`export FLASK_APP=run.py`
+
+`flask run`
+
+Navigate to 127.0.0.1:5000/hello in your browser to check if everything is working properly.
+
+
 # Website requirements
 https://docs.google.com/document/d/1roVEoeM9OlwazfNmCuOj9uCMbijJqFAYO8rB8X7wwh8/edit?usp=sharing
 
@@ -60,3 +87,4 @@ Follow these general guidelines when contributing to the project.
 
 # Contributors 
   * [@daytonallen](https://github.com/daytonallen)
+  
