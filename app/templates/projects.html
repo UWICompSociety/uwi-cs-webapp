@@ -3,6 +3,8 @@
     <head>
         <meta charset="utf-8">
         <title>Projects | Computing Society</title>
+        
+        <meta name="viewport" content="width=device-width,initial-scale=1">
         <!-- Compiled and minified CSS -->
         <link rel="stylesheet" href="css/bootstrap.css" media="screen" title="no title" charset="utf-8">
         <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
@@ -14,10 +16,10 @@
                     <a class='logo' href="index.html">
                         <img src="assets/img/logo.png" alt="logo" />
                     </a>
-                    <a class="nav-link" href="news.html">News</a>
-                    <a class="nav-link" href="projects.html">Projects</a>
-                    <a class="nav-link" href="stream.html">Live Stream</a>
-                    <a href="forum.html">Forum</a>
+                    <a class="nav-link" href="{{ url_for('news') }}">News</a>
+                    <a class="nav-link" href="{{ url_for('projects') }}">Projects</a>
+                    <a class="nav-link" href="{{ url_for('stream') }}">Live Stream</a>
+                    <a href="{{ url_for('forum') }}">Forum</a>
                     <a class="flat-btn flat-btn-warning" href="#">
                         <span class="glyphicon glyphicon-pencil"></span>
                         SignUp
