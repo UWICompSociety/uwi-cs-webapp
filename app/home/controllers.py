@@ -9,35 +9,18 @@ def index():
 
 @home.route('/forum', methods=['GET'])
 def forum():
-    """
-    Remove pass and render the file for the forum section of the website. 
-    Use the index function above as a guide.
-    """
-    pass
-
+    return render_template('forum.html')
 
 @home.route('/news', methods=['GET'])
 def news():
-    """
-    Remove pass and render the file for the news section of the website. 
-    Use the index function above as a guide.
-    """
-    pass
+    return render_template('news.html')
 
 
 @home.route('/projects', methods=['GET'])
 def projects():
-    """
-    Remove pass and render the file for the projects section of the website. 
-    Use the index function above as a guide.
-    """
-    pass
+    return render_template('projects.html')
 
 
 @home.route('/stream', methods=['GET'])
 def stream():
-    """
-    Remove pass and render the file for the stream section of the website. 
-    Use the index function above as a guide.
-    """
-    pass
+    return render_template('stream.html')

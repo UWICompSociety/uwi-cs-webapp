@@ -10,24 +10,27 @@
     </head>
     <body>
         <header>
-            <div class="wrapper">
-                <nav>
-                    <a class='logo' href="#">
-                        <img src="{{ url_for('static', filename='assets/img/logo.png') }}" alt="logo" />
-                    </a>
-                    <a class="nav-link" href="{{ url_for('news') }}">News</a>
-                    <a class="nav-link" href="{{ url_for('projects') }}">Projects</a>
-                    <a class="nav-link" href="{{ url_for('stream') }}">Live Stream</a>
-                    <a href="{{ url_for('forum') }}">Forum</a>
-                    <a class="flat-btn flat-btn-warning" href="#">
-                        <span class="glyphicon glyphicon-pencil"></span>
-                        SignUp
-                    </a>
-                    <a class="flat-btn flat-btn-default" href="#">
-                        <span class="glyphicon glyphicon-user"></span>
-                        LogIn
-                    </a>
-                </nav>
+            <nav class = "navbar " role = "navigation">
+            <div class="navbar">
+
+                
+                <a class='logo' href="#">
+                    <img src="{{ url_for('static', filename='assets/img/logo.png') }}" alt="logo" />
+                </a>
+                <a class="nav-link" href="{{ url_for('home.news') }}">News</a>
+                <a class="nav-link" href="{{ url_for('home.projects') }}">Projects</a>
+                <a class="nav-link" href="{{ url_for('home.stream') }}">Live Stream</a>
+                <a class="nav-link" href="{{ url_for('home.forum') }}">Forum</a>
+                <a class="flat-btn flat-btn-warning" href="#">
+                    <span class="glyphicon glyphicon-pencil"></span>
+                    SignUp
+                </a>
+                <a class="flat-btn flat-btn-default" href="#">
+                    <span class="glyphicon glyphicon-user"></span>
+                    LogIn
+                </a>
+            </div>
+            </nav>
             </div>
         </header>
 
