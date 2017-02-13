@@ -2,14 +2,12 @@
 Application module
 """
 
-from flask import Flask
+from flask import Flask, request, url_for, redirect, render_template
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from config import app_config
 
 db = SQLAlchemy()
-
-
 def create_app(config_name):
     """
     Todo
@@ -30,3 +28,5 @@ def create_app(config_name):
     app.register_blueprint(home_blueprint)
 
     return app
+
+
