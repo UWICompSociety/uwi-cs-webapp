@@ -1,0 +1,28 @@
+<nav>
+	<div>
+		<a href="#"><img src="{{ url_for('static', filename='assets/img/logo.png') }}" alt="Computing Society"></a>
+		<ul>
+			<li><a href="{{ url_for('site.news') }}">News</a></li>
+			<li><a href="{{ url_for('site.projects') }}">Projects</a></li>
+			<li><a href="{{ url_for('site.stream') }}">Live Stream</a></li>
+			<li><a href="{{ url_for('site.forum') }}">Forum</a></li>
+		</ul>
+		<div class="search-bar">
+			<form>
+				<input type="text" name="search">
+				<div class="after"></div>
+				<input type="submit">
+			</form>
+		</div>
+		<div class="header-btn">
+			<a class="flat-btn flat-btn-default" href="">
+				<span class="glyphicon glyphicon-user"></span>
+				Login
+			</a>
+			<a class="flat-btn flat-btn-default" href="">
+				<span class="glyphicon glyphicon-pencil"></span>
+				Sign Up
+			</a>
+		</div>
+	</div>
+</nav>
