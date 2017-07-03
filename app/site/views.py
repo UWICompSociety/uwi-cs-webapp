@@ -1,10 +1,13 @@
+from app import app, db
 from flask import Blueprint, render_template, url_for
+from app.models import person, ProjectView, Project, CarouselView, Carousel, NewsView, News
 
 site = Blueprint('site', __name__, template_folder='templates')
 
 @site.route('/', methods=['GET'])
 def index():
-    return render_template("home.html")
+	carousel_list = Carousel.query.all()
+	return render_template("home.html", carousel_list = carousel_list)
 
 @site.route('/forum', methods=['GET'])
 def forum():

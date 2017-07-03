@@ -6,7 +6,9 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask_admin import Admin
-from flask_admin.contrib.sqla import ModelView
+
+UPLOAD_FOLDER = './app/static/uploads'
+ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'gif'])
 
 app = Flask(__name__)
 
@@ -21,7 +23,9 @@ app.config.from_object(__name__)
 
 
 # ----- Admin ----- #
-admin = Admin(app)
+admin = Admin(app, name='Computing Society', template_mode='bootstrap3')
+
+
 
 
 # ----- Blueprint ----- #
@@ -62,4 +66,4 @@ app.register_blueprint(api)
 
 #     return app
 
-
+import add

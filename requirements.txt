@@ -5,3 +5,4 @@ flask-login
 flask-admin
 psycopg2
 pygresql
+pillow
