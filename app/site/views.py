@@ -7,7 +7,16 @@ site = Blueprint('site', __name__, template_folder='templates')
 @site.route('/', methods=['GET'])
 def index():
 	carousel_list = Carousel.query.all()
-	return render_template("home.html", carousel_list = carousel_list)
+	news = News.query.all()
+	news_list = []
+	for x in reversed(range(len(news))):
+		if x <= 6:
+			news_list.append(news[x])
+		else:
+			break
+	print('######' + str(news_list[0]) + '######')
+	print('######' + str(carousel_list) + '######')
+	return render_template("home.html", carousel_list = carousel_list, news_list = news_list)
 
 @site.route('/forum', methods=['GET'])
 def forum():

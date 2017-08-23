@@ -13,11 +13,43 @@
 	font-family: "Roboto-Thin";
 	src: url('../../static/fonts/Roboto-Thin.ttf') format('truetype');
 }
+@font-face{
+	font-family: "JosefinSans-SemiBoldItalic";
+	src: url('../../static/fonts/JosefinSans-SemiBoldItalic.ttf') format('truetype');
+}
 * {
 	margin: 0;
 }
+h4, h5, h6 {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+section {
+	padding-top: 45px;
+	padding-bottom: 45px;
+}
 .fix-padding {
 	padding: 0;
+}
+
+.center {
+	text-align: center;
+}
+
+.read-more {
+	padding: 12px 30px;
+	border: 3px solid #3a4244;
+	border-radius: 20px;
+	color: #3a4244;
+	text-decoration: none;
+	font-weight: 700;
+}
+
+.read-more:hover {
+	text-decoration: none;
+	background-color: #3a4244;
+	color: #fff;
 }
 
 .carousel-inner .item img{
@@ -37,6 +69,67 @@
 
 .carousel-caption p {
 	font-size: 0.9em;
+}
+h4 {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 31px;
+	font-family: JosefinSans-SemiBoldItalic, sans-serif;
+	letter-spacing: 0em;
+	text-align: inherit;
+}
+
+main h4:nth-of-type(1) {
+	color: #48c4dc;
+}
+/* ------- About Us Section ------- */
+
+.about-us h5 {
+	font-size: 20px;
+}
+.about-content {
+	padding-bottom: 30px;
+}
+/* ------- Partners Section ------- */
+.about-us h4, .about-us h5, .partner h4 {
+	text-align: center;
+}
+
+.partner a img {
+	max-width: 100%;
+	height: 7em;
+}
+.p-container {
+	padding: 45px;
+}
+.p-container span {
+	display: block;
+	font-family: Roboto-Thin, sans-serif;
+	font-weight: 700;
+	font-size: 15px;
+}
+
+/* ------- Latest News Section ------- */
+.news-img {
+	width: 100%;
+	padding-bottom: 80%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.thumbnail {
+	padding: 10px;
+	border: none;
+}
+.thumbnail-image {
+	border: 1px solid rgba(58, 66, 68, 0.18);
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+	padding-left: 10px;
+}
+.thumbnail-image h5 {
+	font-size: 20px;
+	color: #48c4dc;
 }
 
 @media screen and (max-width: 1080px) {
@@ -62,6 +155,12 @@
 
 	.carousel-caption p {
 		font-size: 1.1em;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	h4 {
+		font-size: 44px;
 	}
 }
 
