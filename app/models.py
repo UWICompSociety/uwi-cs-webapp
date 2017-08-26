@@ -58,7 +58,7 @@ class ProjectView(sqla.ModelView):
 	def _list_thumbnail(view, context, model, name):
 		if not model.image:
 			return ''
-		return Markup('<img src="%s">' % url_for('static', filename=form.thumbgen_filename(model.image)))
+		return Markup('<img src="%s">' % url_for('static', filename='uploads/' + form.thumbgen_filename(model.image)))
 
 	column_formatters = { 'image': _list_thumbnail }
 
@@ -69,7 +69,7 @@ class NewsView(sqla.ModelView):
 	def _list_thumbnail(view, context, model, name):
 		if not model.image:
 			return ''
-		return Markup('<img src="%s">' % url_for('static', filename=form.thumbgen_filename(model.image)))
+		return Markup('<img src="%s">' % url_for('static', filename='uploads/' + form.thumbgen_filename(model.image)))
 
 	column_formatters = { 'image': _list_thumbnail }
 
@@ -80,7 +80,7 @@ class CarouselView(sqla.ModelView):
 	def _list_thumbnail(view, context, model, name):
 		if not model.image:
 			return ''
-		return Markup('<img src="%s">' % url_for('static', filename=form.thumbgen_filename(model.image)))
+		return Markup('<img src="%s">' % url_for('static', filename='uploads/' + form.thumbgen_filename(model.image)))
 
 	column_formatters = { 'image': _list_thumbnail }
 
