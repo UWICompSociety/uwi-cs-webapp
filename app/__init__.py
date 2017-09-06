@@ -4,6 +4,7 @@ Application module
 
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
+from flask_login import LoginManager
 from flask_migrate import Migrate
 from flask_admin import Admin
 
@@ -21,6 +22,11 @@ migrate = Migrate(app, db)
 
 app.config.from_object(__name__)
 
+
+#------ Flask Login ----- #
+login_manager = LoginManager()
+login_manager.init_app(app)
+login_manager.login_view = 'site.sign_in'
 
 # ----- Admin ----- #
 admin = Admin(app, name='Computing Society', template_mode='bootstrap3')

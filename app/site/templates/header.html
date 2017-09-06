@@ -7,22 +7,28 @@
 			<li><a href="{{ url_for('site.stream') }}">Live Stream</a></li>
 			<li><a href="{{ url_for('site.forum') }}">Forum</a></li>
 		</ul>
-		<div class="search-bar">
+		<!-- <div class="search-bar">
 			<form>
 				<input type="text" name="search">
 				<div class="after"></div>
 				<input type="submit">
 			</form>
-		</div>
-		<div class="header-btn">
-			<a class="flat-btn flat-btn-default" href="{{ url_for('site.sign_in') }}">
-				<span class="glyphicon glyphicon-user"></span>
-				Sign In
-			</a>
-			<a class="flat-btn flat-btn-default" href="{{ url_for('site.sign_up') }}">
-				<span class="glyphicon glyphicon-pencil"></span>
-				Sign Up
-			</a>
-		</div>
+		</div> -->
+		{% if current_user.is_authenticated %}
+			<div>
+				<h1>You are logged In</h1>
+			</div>
+		{% else %}
+			<div class="header-btn">
+				<a class="flat-btn flat-btn-default" href="{{ url_for('site.sign_in') }}">
+					<span class="glyphicon glyphicon-user"></span>
+					Sign In
+				</a>
+				<a class="flat-btn flat-btn-default" href="{{ url_for('site.sign_up') }}">
+					<span class="glyphicon glyphicon-pencil"></span>
+					Sign Up
+				</a>
+			</div>
+		{% endif %}
 	</div>
 </nav>

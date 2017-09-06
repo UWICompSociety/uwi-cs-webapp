@@ -7,6 +7,7 @@
 }
 body * {
 	box-sizing: border-box;
+	/*background-color: #f4f4ef;*/
 }
 a {
 	color: #48c4dc;
