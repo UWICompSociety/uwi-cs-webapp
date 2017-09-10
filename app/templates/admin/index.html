@@ -1,0 +1,29 @@
+{% extends 'admin/master.html' %}
+
+{% block body %}
+{{ super() }}
+  <div>
+  	<h1>Hello Admin User</h1>
+  	<p>From here you have control of the entire application. The following tabs <b>About, News, Carousel, Project, Person</b> are used as content management.</p>
+  </div>
+  <div>
+  	<h1>Discribtion</h1>
+    <h2>About</h2>
+  	<p>This is where th Mission Statement is written. PLease write only one Mission Statement and Please use <b>Punctuations</b>.</p>
+
+    <h2>News</h2>
+    <p>The News section contains a <b>Title, Detail and Image</b> fields. Please provide information for the Title and Detail fields if no image is provided there will be an no image provide image when the imformation is displayed.</p>
+
+    <h2>Carousel</h2>
+    <p>The Carousel section contains a <b>Name, Description and Image</b> fields. Please provide information for all three fields. <b>NOTE please reframe from making the description too long.</b></p>
+
+    <h2>Project</h2>
+    <p>The Project section contains a <b>Pro Name, Detail and Image</b> fields. Please provide information for the Pro Name and Detail fields if no image is provided there will be an no image provide image when the imformation is displayed.</p>
+
+    <h2>Person</h2>
+    <p>This is where the information is keep for all the persons that signed up for this application. <b>There is a field called Status it distinguish a normal user and an admin user</b>.</p>
+  </div>
+  <div>
+  	<button><a href="{{ url_for('site.index') }}">Back</a></button>
+  </div>
+{% endblock body %}

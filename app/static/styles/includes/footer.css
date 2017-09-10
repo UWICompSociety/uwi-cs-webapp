@@ -1,0 +1,106 @@
+footer {
+	background-color: #2a2b2c;
+	font-family: Roboto-Light;
+}
+
+.footer-logo {
+	display: inline-block;
+}
+.footer-logo a img{
+	height: 5em;
+}
+
+
+.footer-about {
+	display: inline-block;
+}
+
+.site-footer .footer-area-wrap {
+	padding: 0 0.75rem;
+	font-size: 15px;
+}
+
+.invert {
+	color: #fff;
+}
+
+.footer-about a, .footer-contact a {
+	display: inline-block;
+
+	text-decoration: none;
+	text-align: center;
+	cursor: pointer;
+
+	font-weight: 700;
+	font-size: 20px;
+	color: rgba(255,255,255,0.7);
+	text-transform: uppercase;
+
+	padding-bottom: 20px;
+	padding-top: 15px;
+	margin-bottom: 7px; 
+}
+
+.footer-about a:hover, .footer-contact a:hover {
+	color: rgba(255,255,255, 1);
+	text-decoration: none;
+}
+
+.footer-about p, .footer-contact p, .footer-contact div {
+	line-height: 24px;
+	color: #8d8d8f;
+}
+
+.footer-contact div ul {
+	display: inline-block;
+	margin-top: -5px;
+	margin-left: 0;
+	margin-bottom: 0;
+	line-height: 35px;
+	list-style: none;
+	padding: 0;
+}
+
+.footer-contact div ul li span {
+	color: #fff;
+	min-width: 31px;
+	display: inline-block;
+}
+
+.footer-area.widget-area {
+	padding: 55px 0 20px;
+}
+
+.footer-area.widget-area div {
+	padding-bottom: 30px;
+}
+
+.footer-container {
+	padding-right: 0;
+	padding-left: 0;
+	color: #8d8d8f;
+	padding: 25px 2.625rem;
+}
+
+.footer-copyright {
+	display: block;
+	vertical-align: middle;
+}
+
+@media screen and (min-width: 1200px) {
+	.footer-area.widget-area {
+		padding: 95px 0 20px;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.site-footer .footer-area-wrap {
+		padding: 0 2.625rem;
+	}
+}
+
+@media screen and (max-width: 543px) {
+	.site-footer .footer-area-wrap {
+		text-align: center;
+	}
+}

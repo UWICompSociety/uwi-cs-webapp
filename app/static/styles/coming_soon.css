@@ -1,0 +1,68 @@
+* {
+	margin: 0;
+}
+
+body {
+	background: url(../assets/img/error-bg.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	color: #fff;
+	text-align: center;
+}
+
+a {
+	color: #0089ff;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+a:visited {
+	text-decoration: none;
+}
+
+.error-msg-container {
+	background: rgba(255, 255, 255, 0.15);
+	border: 1px solid rgba(102, 102, 102, 0.04);
+	border-radius: 15px;
+	padding: 60px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.error-msg-container h1{
+	padding: 15px 15px;
+	font-size: 60px;
+	color: #d7ecff;
+}
+
+.error-msg-container p {
+	margin-top: 15px;
+	font-size: 20px;
+	line-height: 1.6em;
+}
+
+.error-msg-container p span {
+	color: #48C8D3;
+}
+
+.error-msg-container span {
+	font-size: 14px;
+	color: #8ae1e9;
+}
+
+.error-msg-container div div {
+	margin-top: 35px;
+}
+
+.error-msg-container div div a {
+	background: #fff;
+	padding: 15px;
+	border-radius: 15px;
+}
