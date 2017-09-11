@@ -41,10 +41,9 @@
 				<div class="center col-xs-12 col-sm-12 col-md-12 col-lg-12 col-sl-12">
 					<div class="about-content">
 						<h4>About Us</h4>
-						<h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat.</h5>
+						{% for mission in about %}
+							<h5>{{ mission.mission }}</h5>
+						{% endfor %}
 					</div>
 					<a href="" class="read-more">Read More</a>
 				</div>
@@ -133,12 +132,11 @@
 									{% endif %}
 									<div class="thumbnail-image">
 										<h5>{{ news.title }}</h5>
-										<h6>{{ news.detail }}</h6>
 									</div>
 								</div>
 							{% endfor %}
 						</div>
-						<div class="center"><a href="" class="read-more">Read More</a></div>
+						<div class="center"><a href="{{ url_for('site.news') }}" class="read-more">Read More</a></div>
 					</div>
 				</div>
 			</div>

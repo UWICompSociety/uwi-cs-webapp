@@ -1,0 +1,37 @@
+{% extends 'sign.html' %}
+
+{% block main %}
+	<form action="/sign-in" method="post" accept-charset="utf-8">
+		<input type="email" name="email">
+		<input type="password" name="password">
+		<input type="submit" name="submit">
+	</form>
+	<!-- <div class="main-container">
+		<div>
+			<div class="sign-in-up-container">
+				<div id="sign-in-content" class="tab-content">
+					<div>
+						<div>
+							<div class="form-header">
+								Log Into Your Account
+							</div>
+							<form action="{{ url_for('site.sign_in') }}" method="post">
+								<div class="form-design">
+									<div class="form-group">
+										<input type="email" name="email" autocomplete="off" placeholder="Email Address" class="text-input">
+									</div>
+									<div class="form-group">
+										<input type="password" name="password" autocomplete="off" placeholder="Password" class="text-input">
+									</div>
+								</div>
+								<button type="submit" class="btn btn-style">Sign In</button>
+							</form>
+							<br>
+							<a href="#">Forgot your password?</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> -->
+{% endblock %}

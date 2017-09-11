@@ -1,6 +1,6 @@
 <nav>
 	<div>
-		<a href="#"><img src="{{ url_for('static', filename='assets/img/logo.png') }}" alt="Computing Society"></a>
+		<a href="{{ url_for('site.index') }}"><img src="{{ url_for('static', filename='assets/img/logo.png') }}" alt="Computing Society"></a>
 		<ul>
 			<li><a href="{{ url_for('site.news') }}">News</a></li>
 			<li><a href="{{ url_for('site.projects') }}">Projects</a></li>
@@ -15,8 +15,14 @@
 			</form>
 		</div> -->
 		{% if current_user.is_authenticated %}
-			<div>
-				<h1>You are logged In</h1>
+			<div class="header-log">
+				<ul>
+					<li><a href="">{{ current_user.firstname }} {{ current_user.lastname }}</a></li>
+					{% if current_user.status == 'admin' %}
+					<li><a href="/admin">Admin Mode</a></li>
+					{% endif %}
+					<li><a href="{{ url_for('site.sign_out') }}">Sign Out</a></li>
+				</ul>
 			</div>
 		{% else %}
 			<div class="header-btn">
@@ -30,5 +36,7 @@
 				</a>
 			</div>
 		{% endif %}
+		<div id="hamberger" class="hamberger">
+			<div class="span"></div>
+		</div>
 	</div>
-</nav>

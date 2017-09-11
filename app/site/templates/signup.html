@@ -1,0 +1,39 @@
+{% extends 'sign.html' %}
+
+{% block main %}
+	<div class="main-container">
+		<div>
+			<div class="sign-in-up-container">
+				<div id="sign-up-content" class="tab-content">
+					<div>
+						<div>
+							<div class="form-header">
+								Create Your Account
+							</div>
+							<form action="{{ url_for('site.sign_up') }}" method="post">
+								{{ form.csrf_token }}
+								<div class="form-design">
+									<div class="form-group">
+										<!-- <input type="text" name="firstname" autocomplete="off" placeholder="First Name*" class="text-input"> -->
+										{{ form.firstname (class='text-input', placeholder='First Name') }}
+										<!-- <input type="text" name="lastname" autocomplete="off" placeholder="Last Name*" class="text-input input-margin"> -->
+										{{ form.lastname (class='text-input input-margin', placeholder='Last Name') }} 
+									</div>
+									<div class="form-group">
+										<input type="email" name="email" autocomplete="off" placeholder="Email Address*" class="text-input">
+									</div>
+									<div class="form-group">
+										<input type="password" name="password" autocomplete="off" placeholder="Password*" class="text-input">
+										<input type="password" name="confirm" autocomplete="off" placeholder="Confirm Password*" class="text-input input-margin">
+										<input type="hidden" name="status" value="normal">
+									</div>
+								</div>
+								<button type="submit" class="btn btn-style">Sign Up</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

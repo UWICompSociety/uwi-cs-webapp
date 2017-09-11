@@ -1,6 +1,7 @@
 header {
 	height: 5em;
 	background-color: #3a4244/*#008080 #07425a*/;
+  overflow: hidden;
 }
 
 /* ----- logo style ----- */
@@ -268,7 +269,7 @@ header form.open .after:after {
 
 /* ----- login and signup style ----- */
 
-header .header-btn {
+header .header-btn, .header-log {
 	display: inline-block;
 	float: right;
 	position: absolute;
@@ -282,6 +283,106 @@ header .header-btn a {
 	margin-left: 20px;
 	background-color: #fff;
 }
+
+/* ----- drop down style ----- */
+.header-dropdw {
+  display: inline-block;
+  position: absolute;
+  right: 3%;
+  top: 1.5%;
+  margin: 0 auto;
+  padding: 12px 15px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease-out;
+}
+
+.header-dropdw h1 {
+  font-size: 15px;
+  color: rgba(255,255,255,0.7);
+  margin: 0;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* ----- Hamberger button ----- */
+.hamberger {
+  display: none;
+}
+
+/*.header-dropdw:after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  margin-top: -3px;
+  border-width: 6px 6px 0 6px;
+  border-style: solid;
+  border-color: #fff;
+}
+
+.header-dropdw .dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border-radius: 0 0 5px 5px;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-top: none;
+  border-bottom: none;
+  list-style: none;
+  transition: all 0.3s ease-out;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.header-dropdw .dropdown li {
+  padding: 0 10px;
+}
+
+.header-dropdw .dropdown li a {
+  display: block;
+  text-decoration: none;
+  padding: 10px 0;
+  transition: all 0.3s ease-out;
+  border-bottom: 1px solid #e6e8ea;
+}
+
+.header-dropdw .dropdown li:last-of-type a {
+  border: none;
+}
+
+.header-dropdw .dropdown li i {
+  margin-right: 5px;
+  color: inherit;
+  vertical-align: middle;
+}
+
+.header-dropdw .dropdown li:hover a {
+  color: #48c4dc;
+}*/
+
+/*.header-dropdw.active {
+  border-radius: 5px 5px 0 0;
+  background-color: #fff;
+  box-shadow: none;
+  border-bottom: none;
+  color: #333;
+}
+
+.header-dropdw.active:after {
+  border-color: #82d1ff transparent;
+}
+
+.header-dropdw.active .dropdown {
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  max-height: 400px;
+}*/
+
 
 
 /* ----- screen size style ----- */
@@ -309,4 +410,97 @@ header .header-btn a {
       color: #fff;
     }
 }
+}
+
+@media screen and (max-width: 830px) {
+
+  .header {
+    height: auto;
+    transition: all 0.3s ease-out;
+  }
+
+  header nav ul li {
+    display: block;
+    text-align: center;
+    padding-bottom: 15px;
+
+  }
+  header .header-btn, .header-log {
+    display: block;
+    position: relative;
+    float: none;
+    top: 0;
+    right: 0;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 15px;
+  }
+
+  header .header-btn a {
+    display: block;
+    width: 200px;
+    margin: auto;
+    margin-bottom: 15px;
+  }
+
+  .hamberger {
+    display: block;
+    height: 5em;
+    width: 88px;
+    cursor: pointer;
+    position: absolute;
+    right: 5%;
+    top: 0;
+  }
+
+  .hamberger .span {
+    height: 2px;
+    width: 55px;
+    border-radius: 15px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: all 0.3s;
+  }
+
+  .hamberger .span::before {
+    top: -20px;
+  }
+
+  .hamberger .span::after {
+    top: 20px;
+  }
+
+  .hamberger .span::before, .hamberger .span::after {
+    height: 2px;
+    width: 100%;
+    border-radius: 15px;
+    position: absolute;
+    right: 0;
+    content: "";
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: all 0.3s;
+  }
+
+  .hamberger.active .span {
+    background-color: transparent;
+  }
+
+  .hamberger.active .span::before {
+    top: 0;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  .hamberger.active .span::after {
+    top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
 }

@@ -1,0 +1,52 @@
+{% extends 'index.html' %}
+
+{% block main %}
+	<section class="about-us">
+		<div class="container">
+			<div class="row">
+				<div class="center col-xs-12 col-sm-12 col-md-12 col-lg-12 col-sl-12">
+					<div class="about-content">
+						<h4>About Us</h4>
+						{% for mission in about %}
+							<h5>{{ mission.mission }}</h5>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-sl-12">
+					<div>
+						<div class="row">
+							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-sl-12 thumbnail">
+								{% for execut in execut %}
+									<div class='pres-img'>
+									{% if execut.position == "President" %}
+											{% if execut.image is not none %}
+											<div class="news-img" style="background-image: url({{ url_for('static', filename = 'uploads/' + execut.image) }});"></div>
+										{% else %}
+											<div class="news-img" style="background-image: url('../static/assets/img/noimage.png')"></div>
+										{% endif %}
+										<h1>{{ execut.firstname }} {{ execut.lastname }} <span> - {{ execut.position }}</span> </h1>
+									{% endif %}
+									</div>
+
+								{% endfor %}
+								<!-- Change the code here -->
+							</div>
+							<div class="col-xs-12 col-md-6">
+								{% for  %}
+							</div>
+							<div class="col-xs-12 col-md-6">
+								<div>Something</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}
