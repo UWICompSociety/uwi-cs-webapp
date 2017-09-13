@@ -1,7 +1,7 @@
 from app import app, db, login_manager
 from flask import Blueprint, render_template, url_for, request, redirect, session
 from flask_login import login_user, logout_user, current_user, login_required
-from app.models import About, Person, ProjectView, Project, CarouselView, Carousel, NewsView, News, ExecutivesView, Executives
+from app.models import About, Person, ImageView, ProjectView, Project, CarouselView, Carousel, NewsView, News, ExecutivesView, Executives, Images
 from app.forms import Sign_in, Sign_up
 
 import random, hashlib, time
@@ -108,7 +108,7 @@ def news():
 
 @site.route('/projects', methods=['GET'])
 def projects():
-    return render_template('coming_soon.html')
+    return render_template('project.html')
 
 
 @site.route('/stream', methods=['GET'])

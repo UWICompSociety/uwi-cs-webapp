@@ -17,32 +17,44 @@
 	</section>
 	<section>
 		<div class="container">
+			<div class="center col-xs-12 col-sm-12 col-md-12 col-lg-12 col-sl-12">
+					<div class="about-content">
+						<h4>Executive Members</h4>
+					</div>
+				</div>
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-sl-12">
 					<div>
 						<div class="row">
 							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-sl-12 thumbnail">
 								{% for execut in execut %}
+								{% if execut.position == "President" %}
 									<div class='pres-img'>
-									{% if execut.position == "President" %}
-											{% if execut.image is not none %}
-											<div class="news-img" style="background-image: url({{ url_for('static', filename = 'uploads/' + execut.image) }});"></div>
+										{% if execut.image is not none %}
+										<div class="news-img" style="background-image: url({{ url_for('static', filename = 'uploads/' + execut.image) }});"></div>
 										{% else %}
 											<div class="news-img" style="background-image: url('../static/assets/img/noimage.png')"></div>
 										{% endif %}
 										<h1>{{ execut.firstname }} {{ execut.lastname }} <span> - {{ execut.position }}</span> </h1>
-									{% endif %}
 									</div>
-
+								{% endif %}
 								{% endfor %}
 								<!-- Change the code here -->
 							</div>
-							<div class="col-xs-12 col-md-6">
-								{% for  %}
-							</div>
-							<div class="col-xs-12 col-md-6">
-								<div>Something</div>
-							</div>
+						</div>
+						<div class="row">
+							{% for execut in execut %}
+								{% if execut.position != "President" %}
+								<div class="col=lg-2 col-md-4 col-sm-6 execut">
+								{% if execut.image is not none %}
+									<div class="news-img" style="background-image: url({{ url_for('static', filename = 'uploads/' + execut.image) }});"></div>
+									{% else %}
+									<div class="news-img" style="background-image: url('../static/assets/img/noimage.png')"></div>
+									{% endif %}
+									<h1>{{ execut.firstname }} {{ execut.lastname }} <span> - {{ execut.position }}</span> </h1>
+								</div>
+								{% endif %}
+							{% endfor %}
 						</div>
 					</div>
 				</div>

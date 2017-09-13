@@ -94,10 +94,27 @@ class Project(db.Model):
 	id = db.Column(db.Integer, primary_key=True)
 	pro_name = db.Column(db.Unicode(70))
 	detail = db.Column(db.Text, nullable=False)
-	image = db.Column(db.Unicode(128))
+	image = db.relationship('Images', backref='project', lazy='dynamic')
+	category = db.Column(db.Unicode(255))
+	displayImg = db.Column(db.Unicode(128))
 
 	def __unicode__(self):
 		return self.pro_name
+
+class Images(db.Model):
+	id = db.Column(db.Integer, primary_key=True)
+	image = db.Column(db.Unicode(128))
+	pro_id = db.Column(db.Integer, db.ForeignKey('project.id'))
+
+class ImageView(MyModelView):
+	def _list_thumbnail(view, context, model, name):
+		if not model.image:
+			return ''
+		return Markup('<img src="%s">' % url_for('static', filename='uploads/' + form.thumbgen_filename(model.image)))
+
+	column_formatters = { 'image': _list_thumbnail }
+
+	form_extra_fields = { 'image': form.ImageUploadField('Images', base_path=file_path, thumbnail_size=(100, 100, True)) }
 
 class ProjectView(MyModelView):
 	def _list_thumbnail(view, context, model, name):

@@ -1,0 +1,39 @@
+{% extends 'index.html' %}
+
+{% block main %}
+	<section id="heading">
+		<div class="container">
+			<div class="row">
+				<div class="center col-xs-12 col-sm-12 col-md-12 col-lg-12 col-sl-12">
+					<div class="about-content">
+						<h4>Projects</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="games">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-sl-12">
+					<div class="about-content">
+						<h4>Gaming</h4>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+			{% for projects in projects %}
+			{% if projects.category == "Game" %}
+				<div class="col-xs-6 col-md-4">
+					{% if projects.displayImg is not None %}
+					<div class="news-img" style="background-image: url({{ url_for('static', filename = 'uploads/' + projects.displayImg) }});"></div>
+					{% else %}
+					<div class="news-img" style="background-image: url('../static/assets/img/noimage.png')"></div>
+					{% endif %}
+				</div>
+			{% endif %}
+			{% endfor %}
+			</div>
+		</div>
+	</section>
+{% endblock %}
