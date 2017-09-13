@@ -22,9 +22,11 @@
 			{% include 'footer.html' %}
 		</footer>
 	</body>
+	
 	<script type="text/javascript" src="{{ url_for('static', filename='scripts/jquery-3.1.1.min.js')}}"></script>
-	<script type="text/javascript" src="{{ url_for('static', filename='scripts/animation.js')}}"></script>
+	<!-- <script type="text/javascript" src="{{ url_for('static', filename='scripts/animation.js')}}"></script> -->
 	<script type="text/javascript" src="{{ url_for('static', filename='scripts/bootstrap.js')}}"></script>
 	<script type="text/javascript" src="{{ url_for('static', filename='scripts/bootstrap.min.js')}}"></script>
 	<script type="text/javascript" src="{{ url_for('static', filename='scripts/functionalities.js')}}"></script>
+	{% block javascript %} {% endblock %}
 </html>

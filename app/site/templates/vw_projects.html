@@ -1,0 +1,93 @@
+{% extends 'index.html' %}
+
+{% block css %}
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+<style type="text/css" media="screen">
+	.tz-gallery {
+    padding: 40px;
+}
+
+.tz-gallery .lightbox img {
+    width: 100%;
+    margin-bottom: 30px;
+    transition: 0.2s ease-in-out;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+}
+
+
+.tz-gallery .lightbox img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+}
+
+.tz-gallery img {
+    border-radius: 4px;
+}
+
+.baguetteBox-button {
+    background-color: transparent !important;
+}
+
+
+@media(max-width: 768px) {
+    body {
+        padding: 0;
+    }
+
+    .container.gallery-container {
+        border-radius: 0;
+    }
+}
+</style>
+
+{% endblock %}
+
+{% block main %}
+
+<section id="heading">
+		<div class="container">
+			<div class="row">
+				<div class="center col-xs-12 col-sm-6 col-md-8">
+					<div class="about-content">
+						<h4>{{ get_project.pro_name }}</h4>
+						<p>{{ get_project.detail }}</p>
+					</div>
+				</div>
+				<div class="col-xs-6 col-sm-4">
+					{% for get_developers in get_developers %}
+					<h3>{{ get_developers.firstname }} {{ get_developers.lastname }}</h3>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="gallery">
+		<div class="container">
+			<div class="tz-gallery">
+				<div class="row">
+					<div class="col-sm-6 col-md-4">
+						<a class="lightbox" href="{{ url_for('static', filename = 'uploads/' + get_project.image) }}">
+							<img src="{{ url_for('static', filename = 'uploads/' + get_project.image) }}" alt="">
+						</a>
+					</div>
+				{% for get_pro_img in get_pro_img %}
+					<div class="col-sm-6 col-md-4">
+						<a class="lightbox" href="{{ url_for('static', filename = 'uploads/' + get_pro_img.image) }}">
+							<img src="{{ url_for('static', filename = 'uploads/' + get_pro_img.image) }}" alt="">
+						</a>
+					</div>
+				{% endfor %}
+				</div>
+			</div>
+		</div>
+	</section>
+
+{% endblock %}
+
+{% block javascript %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+<script>
+    baguetteBox.run('.tz-gallery');
+</script>
+{% endblock %}

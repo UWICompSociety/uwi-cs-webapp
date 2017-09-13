@@ -1,7 +1,7 @@
 from app import app, db, login_manager
 from flask import Blueprint, render_template, url_for, request, redirect, session
 from flask_login import login_user, logout_user, current_user, login_required
-from app.models import About, Person, ImageView, ProjectView, Project, CarouselView, Carousel, NewsView, News, ExecutivesView, Executives, Images
+from app.models import About, Person, ImageView, ProjectView, Project, CarouselView, Carousel, NewsView, News, ExecutivesView, Executives, Images, Developers
 from app.forms import Sign_in, Sign_up
 
 import random, hashlib, time
@@ -115,8 +115,9 @@ def projects():
 @login_required
 def view_projects(pro_name):
 	get_project = Project.query.filter_by(pro_name=pro_name).first()
-	get_pro_img = Images.query.filter_by(project=pro_name).all()
-	return render_template('vw_project.html', get_project=get_project, get_pro_img=get_pro_img)
+	get_pro_img = Images.query.filter_by(pro_id=get_project.id).all()
+	get_developers = Developers.query.filter_by(pro_id=get_project.id).all()
+	return render_template('vw_projects.html', get_project=get_project, get_pro_img=get_pro_img, get_developers=get_developers)
 
 @site.route('/stream', methods=['GET'])
 @login_required

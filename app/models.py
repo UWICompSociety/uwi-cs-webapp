@@ -110,7 +110,7 @@ class Images(db.Model):
 
 class Developers(db.Model):
 	id = db.Column(db.Integer, primary_key=True)
-	filename = db.Column(db.String(50))
+	firstname = db.Column(db.String(50))
 	lastname = db.Column(db.String(50))
 	pro_id = db.Column(db.Integer, db.ForeignKey('project.id'))
 
