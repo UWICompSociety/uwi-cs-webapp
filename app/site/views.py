@@ -108,8 +108,15 @@ def news():
 
 @site.route('/projects', methods=['GET'])
 def projects():
-    return render_template('project.html')
+	projects = Project.query.all()
+	return render_template('project.html', projects = projects)
 
+@site.route('/projects/detail/<pro_name>', methods=['GET'])
+@login_required
+def view_projects(pro_name):
+	get_project = Project.query.filter_by(pro_name=pro_name).first()
+	get_pro_img = Images.query.filter_by(project=pro_name).all()
+	return render_template('vw_project.html', get_project=get_project, get_pro_img=get_pro_img)
 
 @site.route('/stream', methods=['GET'])
 @login_required

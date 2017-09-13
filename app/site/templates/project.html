@@ -7,6 +7,7 @@
 				<div class="center col-xs-12 col-sm-12 col-md-12 col-lg-12 col-sl-12">
 					<div class="about-content">
 						<h4>Projects</h4>
+						<p>These are some of the project that where developed by Members of the Computing Society</p>
 					</div>
 				</div>
 			</div>
@@ -21,15 +22,111 @@
 					</div>
 				</div>
 			</div>
-			<div class="row">
+			<div class="row project-container">
 			{% for projects in projects %}
 			{% if projects.category == "Game" %}
-				<div class="col-xs-6 col-md-4">
-					{% if projects.displayImg is not None %}
-					<div class="news-img" style="background-image: url({{ url_for('static', filename = 'uploads/' + projects.displayImg) }});"></div>
+				<div class="col-xs-12 col-md-4 project-display">
+					{% if projects.image is not none %}
+					<div class="news-img" style="background-image: url({{ url_for('static', filename = 'uploads/' + projects.image) }});"></div>
 					{% else %}
 					<div class="news-img" style="background-image: url('../static/assets/img/noimage.png')"></div>
 					{% endif %}
+					<div>
+						<h1>{{ projects.pro_name }}</h1>
+						<br>
+						<a href="/projects/detail/{{ projects.pro_name }}" style="margin-right: 15px;"><i class="fa fa-info-circle" aria-hidden="true"></i>Read More</a>
+						<a href="{{ projects.github }}"><i class="fa fa-github" aria-hidden="true"></i>GitHub</a>
+					</div>
+				</div>
+			{% endif %}
+			{% endfor %}
+			</div>
+		</div>
+	</section>
+	<section class="webb-app">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-sl-12">
+					<div class="about-content">
+						<h4>Web Application</h4>
+					</div>
+				</div>
+			</div>
+			<div class="row project-container">
+			{% for projects in projects %}
+			{% if projects.category == "Web-App" %}
+				<div class="col-xs-12 col-md-4 project-display">
+					{% if projects.image is not none %}
+					<div class="news-img" style="background-image: url({{ url_for('static', filename = 'uploads/' + projects.image) }});"></div>
+					{% else %}
+					<div class="news-img" style="background-image: url('../static/assets/img/noimage.png')"></div>
+					{% endif %}
+					<div>
+						<h1>{{ projects.pro_name }}</h1>
+						<br>
+						<a href="/projects/detail/{{ projects.pro_name }}" style="margin-right: 15px;"><i class="fa fa-info-circle" aria-hidden="true"></i>Read More</a>
+						<a href="{{ projects.github }}"><i class="fa fa-github" aria-hidden="true"></i>GitHub</a>
+					</div>
+				</div>
+			{% endif %}
+			{% endfor %}
+			</div>
+		</div>
+	</section>
+	<section class="mobile-web-app">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-sl-12">
+					<div class="about-content">
+						<h4>Mobile Web Application</h4>
+					</div>
+				</div>
+			</div>
+			<div class="row project-container">
+			{% for projects in projects %}
+			{% if projects.category == "Mobile-Web-App" %}
+				<div class="col-xs-12 col-md-4 project-display">
+					{% if projects.image is not none %}
+					<div class="news-img" style="background-image: url({{ url_for('static', filename = 'uploads/' + projects.image) }});"></div>
+					{% else %}
+					<div class="news-img" style="background-image: url('../static/assets/img/noimage.png')"></div>
+					{% endif %}
+					<div>
+						<h1>{{ projects.pro_name }}</h1>
+						<br>
+						<a href="/projects/detail/{{ projects.pro_name }}" style="margin-right: 15px;"><i class="fa fa-info-circle" aria-hidden="true"></i>Read More</a>
+						<a href="/{{ projects.github }}"><i class="fa fa-github" aria-hidden="true"></i>GitHub</a>
+					</div>
+				</div>
+			{% endif %}
+			{% endfor %}
+			</div>
+		</div>
+	</section>
+	<section class="embedded-system">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-sl-12">
+					<div class="about-content">
+						<h4>Embedded Systems</h4>
+					</div>
+				</div>
+			</div>
+			<div class="row project-container">
+			{% for projects in projects %}
+			{% if projects.category == "Embedded-System" %}
+				<div class="col-xs-12 col-md-4 project-display">
+					{% if projects.image is not none %}
+					<div class="news-img" style="background-image: url({{ url_for('static', filename = 'uploads/' + projects.image) }});"></div>
+					{% else %}
+					<div class="news-img" style="background-image: url('../static/assets/img/noimage.png')"></div>
+					{% endif %}
+					<div>
+						<h1>{{ projects.pro_name }}</h1>
+						<br>
+						<a href="/projects/detail/{{ projects.pro_name }}" style="margin-right: 15px;"><i class="fa fa-info-circle" aria-hidden="true"></i>Read More</a>
+						<a href="/{{ projects.github }}"><i class="fa fa-github" aria-hidden="true"></i>GitHub</a>
+					</div>
 				</div>
 			{% endif %}
 			{% endfor %}

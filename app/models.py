@@ -94,9 +94,11 @@ class Project(db.Model):
 	id = db.Column(db.Integer, primary_key=True)
 	pro_name = db.Column(db.Unicode(70))
 	detail = db.Column(db.Text, nullable=False)
-	image = db.relationship('Images', backref='project', lazy='dynamic')
+	github = db.Column(db.Unicode(255))
+	pro_image = db.relationship('Images', backref='project', lazy='dynamic')
+	developers = db.relationship('Developers', backref='project', lazy='dynamic')
 	category = db.Column(db.Unicode(255))
-	displayImg = db.Column(db.Unicode(128))
+	image = db.Column(db.Unicode(128))
 
 	def __unicode__(self):
 		return self.pro_name
@@ -104,6 +106,12 @@ class Project(db.Model):
 class Images(db.Model):
 	id = db.Column(db.Integer, primary_key=True)
 	image = db.Column(db.Unicode(128))
+	pro_id = db.Column(db.Integer, db.ForeignKey('project.id'))
+
+class Developers(db.Model):
+	id = db.Column(db.Integer, primary_key=True)
+	filename = db.Column(db.String(50))
+	lastname = db.Column(db.String(50))
 	pro_id = db.Column(db.Integer, db.ForeignKey('project.id'))
 
 class ImageView(MyModelView):
