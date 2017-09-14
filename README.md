@@ -8,56 +8,41 @@ TODO: description
 # Setup 
 
 ### Linux & MacOS
-Assuming you are using bash as your shell. After cloning the repo, navigate to the uwi-cs-webapp folder in your terminal. In that folder, enter 
-
-To create a virtual environment.
-
-`python3 -m venv ./venv` 
-
-To activate virtual environment.
-
-`source ./venv/bin/activate`
-
-To install all requirements.
-
-`pip3 install -r requirements.txt`
-
-To run development server.
-
-`export FLASK_CONFIG=development`
-
-`export FLASK_APP=run.py`
-
-`flask run`
-
-Navigate to 127.0.0.1:5000 in your browser to check if everything is working properly.
-
+Assuming you are using bash as your shell. After cloning the repo, navigate to the uwi-cs-webapp folder in your terminal.
 
 ### Windows
-Download and install git which includes git bash. Using git bash as your shell, clone the repo, and navigate to the uwi-cs-webapp folder in your terminal. In that folder, enter 
 
-To create a virtual environment.
+Download and install git which includes git bash. Using git bash as your shell, clone the repo, and navigate to the uwi-cs-webapp folder in your terminal.
 
-`python -m venv ./venv` 
+Once in that folder, follow these steps.
 
-To activate virtual environment.
+1.  Create a virtual environment.
 
-`./venv/Scripts/activate.bat`
+    ```
+    $ python3 -m venv ./venv
+    ``` 
 
-To install all requirements.
+2.  Activate the virtual environment.
 
-`pip install -r requirements.txt`
+    ```
+    $ source ./venv/bin/activate
+    ```
 
-To run development server.
+3.  Install all requirements.
 
-`export FLASK_CONFIG=development`
+    ```
+    $ pip3 install -r requirements.txt
+    ```
 
-`export FLASK_APP=run.py`
+4.  Run the development server.
 
-`flask run`
+    ```
+    $ export FLASK_CONFIG=development
+    $ export FLASK_APP=run.py
+    $ flask run
+    ```
 
-Navigate to 127.0.0.1:5000 in your browser to check if everything is working properly.
-
+5.  Navigate to 127.0.0.1:5000 in your browser to check if everything is working properly.
 
 # Website requirements
 https://docs.google.com/document/d/1roVEoeM9OlwazfNmCuOj9uCMbijJqFAYO8rB8X7wwh8/edit?usp=sharing
