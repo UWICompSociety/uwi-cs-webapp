@@ -35,6 +35,7 @@
 											Log Into Your Account
 										</div>
 										<form action="{{ url_for('site.sign_in') }}" method="post" enctype="multipart/form-data">
+											{{ form.csrf_token }}
 											<div class="form-design">
 												<div class="form-group">
 													<input type="email" name="email" autocomplete="off" placeholder="Email Address" class="text-input">
@@ -57,6 +58,7 @@
 											Create Your Account
 										</div>
 										<form action="{{ url_for('site.sign_up') }}" method="post" enctype="multipart/form-data">
+											{{ form.csrf_token }}
 											<div class="form-design">
 												<div class="form-group">
 													<input type="text" name="firstname" value="" autocomplete="off" placeholder="First Name*" class="text-input">
@@ -85,6 +87,7 @@
 											Log Into Your Account
 										</div>
 										<form action="{{ url_for('site.sign_in') }}" method="post" enctype="multipart/form-data">
+											{{ form.csrf_token }}
 											<div class="form-design">
 												<div class="form-group">
 													<input type="email" name="email" autocomplete="off" placeholder="Email Address" class="text-input">
@@ -107,6 +110,7 @@
 											Create Your Account
 										</div>
 										<form action="{{ url_for('site.sign_up') }}" method="post" enctype="multipart/form-data">
+											{{ form.csrf_token }}
 											<div class="form-design">
 												<div class="form-group">
 													<input type="text" name="firstname" value="" autocomplete="off" placeholder="First Name*" class="text-input">

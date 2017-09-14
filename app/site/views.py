@@ -10,7 +10,7 @@ site = Blueprint('site', __name__, template_folder='templates')
 @site.route('/sign-in', methods=['GET','POST'])
 def sign_in():
 	form = Sign_in()
-	if request.method == 'POST':
+	if form.validate_on_submit():
 		
 		email = request.form['email']
 		password = request.form['password']
@@ -37,7 +37,7 @@ def sign_up():
 	print ("hello")
 	form = Sign_up()
 	
-	if request.method == 'POST':
+	if form.validate_on_submit():
 
 		
 		firstname = request.form['firstname']
