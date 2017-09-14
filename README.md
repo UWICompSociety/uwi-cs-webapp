@@ -7,7 +7,7 @@ TODO: description
 
 # Setup 
 
-### Linux & MacOS
+### Linux & macOS
 Assuming you are using bash as your shell. After cloning the repo, navigate to the uwi-cs-webapp folder in your terminal.
 
 ### Windows
