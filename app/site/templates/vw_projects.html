@@ -55,9 +55,12 @@
 					</div>
 				</div>
 				<div class="col-xs-6 col-sm-4">
-					{% for get_developers in get_developers %}
-					<h3>{{ get_developers.firstname }} {{ get_developers.lastname }}</h3>
-					{% endfor %}
+					<div class="about-content">
+						<h4>Developers</h4>
+						{% for get_developers in get_developers %}
+						<h3>{{ get_developers.firstname }} {{ get_developers.lastname }}</h3>
+						{% endfor %}
+					</div>
 				</div>
 			</div>
 		</div>

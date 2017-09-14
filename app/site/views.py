@@ -94,7 +94,8 @@ def about():
 
 @site.route('/forum', methods=['GET'])
 def forum():
-    return render_template('coming_soon.html')
+	about = About.query.all()
+	return render_template('coming_soon.html', about=about)
 
 @site.route('/news', methods=['GET'])
 def news():
@@ -109,7 +110,8 @@ def news():
 @site.route('/projects', methods=['GET'])
 def projects():
 	projects = Project.query.all()
-	return render_template('project.html', projects = projects)
+	about = About.query.all()
+	return render_template('project.html', projects = projects, about=about)
 
 @site.route('/projects/detail/<pro_name>', methods=['GET'])
 @login_required
@@ -117,12 +119,14 @@ def view_projects(pro_name):
 	get_project = Project.query.filter_by(pro_name=pro_name).first()
 	get_pro_img = Images.query.filter_by(pro_id=get_project.id).all()
 	get_developers = Developers.query.filter_by(pro_id=get_project.id).all()
-	return render_template('vw_projects.html', get_project=get_project, get_pro_img=get_pro_img, get_developers=get_developers)
+	about = About.query.all()
+	return render_template('vw_projects.html', get_project=get_project, get_pro_img=get_pro_img, get_developers=get_developers, about=about)
 
 @site.route('/stream', methods=['GET'])
 @login_required
 def stream():
-    return render_template('coming_soon.html')
+	about = About.query.all()
+	return render_template('coming_soon.html', about=about)
 
 # ------------------ Functionalities ---------------------
 
