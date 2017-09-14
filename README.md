@@ -1,13 +1,16 @@
 # UWI Mona Computing Society's Web App
+
 TODO: description
 
-# Requirements 
+## Requirements
+
 * python 3.6
 * postgresql
 
-# Setup 
+## Setup
 
 ### Linux & macOS
+
 Assuming you are using bash as your shell. After cloning the repo, navigate to the uwi-cs-webapp folder in your terminal.
 
 ### Windows
@@ -44,10 +47,12 @@ Once in that folder, follow these steps.
 
 5.  Navigate to 127.0.0.1:5000 in your browser to check if everything is working properly.
 
-# Website requirements
+## Website requirements
+
 https://docs.google.com/document/d/1roVEoeM9OlwazfNmCuOj9uCMbijJqFAYO8rB8X7wwh8/edit?usp=sharing
 
-# What we'll be developing? 
+## What we'll be developing?
+
 ![alt text](https://github.com/UWICompSociety/uwi-cs-webapp/blob/master/mockups/mock1.png "Website mockup1")
 
 ![alt text](https://github.com/UWICompSociety/uwi-cs-webapp/blob/master/mockups/mock2.png "Website mockup2")
@@ -56,7 +61,7 @@ https://docs.google.com/document/d/1roVEoeM9OlwazfNmCuOj9uCMbijJqFAYO8rB8X7wwh8/
 
 ![alt text](https://github.com/UWICompSociety/uwi-cs-webapp/blob/master/mockups/mock4.png "Website mockup4")
 
-# Contributions
+## Contributions
 
 Follow these general guidelines when contributing to the project.
 
@@ -70,7 +75,8 @@ Follow these general guidelines when contributing to the project.
 * Your code will be reviewed, feedback may be given.
 * Your final code will then be merged into the development branch on the main repo and you will be added as a contributor to the project.
 
-# Contributors 
+## Contributors
+
   * [@daytonallen](https://github.com/daytonallen)
   * [@renzy101](https://github.com/renzy101)
   * [@superrcoop](https://github.com/superrcoop)
