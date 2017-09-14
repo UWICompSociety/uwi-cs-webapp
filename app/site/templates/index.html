@@ -5,12 +5,13 @@
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Computing Society</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/bootstrap.css') }}">
 		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style.css') }}">
 		{% block css %} {% endblock %}
 	</head>
 	<body>
-		<header>
+		<header id="header">
 			{% include 'header.html' %}
 		</header>
 		<main>
@@ -21,8 +22,11 @@
 			{% include 'footer.html' %}
 		</footer>
 	</body>
+	
 	<script type="text/javascript" src="{{ url_for('static', filename='scripts/jquery-3.1.1.min.js')}}"></script>
-	<script type="text/javascript" src="{{ url_for('static', filename='scripts/animation.js')}}"></script>
+	<!-- <script type="text/javascript" src="{{ url_for('static', filename='scripts/animation.js')}}"></script> -->
 	<script type="text/javascript" src="{{ url_for('static', filename='scripts/bootstrap.js')}}"></script>
 	<script type="text/javascript" src="{{ url_for('static', filename='scripts/bootstrap.min.js')}}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='scripts/functionalities.js')}}"></script>
+	{% block javascript %} {% endblock %}
 </html>

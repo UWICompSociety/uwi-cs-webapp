@@ -34,7 +34,7 @@
 										<div class="form-header">
 											Log Into Your Account
 										</div>
-										<form action="{{ url_for('site.sign_in') }}" method="POST" enctype="multipart/form-data">
+										<form action="{{ url_for('site.sign_in') }}" method="post" enctype="multipart/form-data">
 											<div class="form-design">
 												<div class="form-group">
 													<input type="email" name="email" autocomplete="off" placeholder="Email Address" class="text-input">
@@ -56,7 +56,7 @@
 										<div class="form-header">
 											Create Your Account
 										</div>
-										<form action="{{ url_for('site.sign_up') }}" method="POST" enctype="multipart/form-data">
+										<form action="{{ url_for('site.sign_up') }}" method="post" enctype="multipart/form-data">
 											<div class="form-design">
 												<div class="form-group">
 													<input type="text" name="firstname" value="" autocomplete="off" placeholder="First Name*" class="text-input">
@@ -84,7 +84,7 @@
 										<div class="form-header">
 											Log Into Your Account
 										</div>
-										<form action="{{ url_for('site.sign_in') }}" method="POST" enctype="multipart/form-data">
+										<form action="{{ url_for('site.sign_in') }}" method="post" enctype="multipart/form-data">
 											<div class="form-design">
 												<div class="form-group">
 													<input type="email" name="email" autocomplete="off" placeholder="Email Address" class="text-input">
@@ -106,7 +106,7 @@
 										<div class="form-header">
 											Create Your Account
 										</div>
-										<form action="{{ url_for('site.sign_up') }}" method="POST" enctype="multipart/form-data">
+										<form action="{{ url_for('site.sign_up') }}" method="post" enctype="multipart/form-data">
 											<div class="form-design">
 												<div class="form-group">
 													<input type="text" name="firstname" value="" autocomplete="off" placeholder="First Name*" class="text-input">
@@ -133,7 +133,6 @@
 		</main>
 	</body>
 	<script type="text/javascript" src="{{ url_for('static', filename='scripts/jquery-3.1.1.min.js')}}"></script>
-	<script type="text/javascript" src="{{ url_for('static', filename='scripts/animation.js')}}"></script>
 	<script type="text/javascript" src="{{ url_for('static', filename='scripts/bootstrap.js')}}"></script>
 	<script type="text/javascript" src="{{ url_for('static', filename='scripts/bootstrap.min.js')}}"></script>
 	<script type="text/javascript" src="{{ url_for('static', filename='scripts/functionalities.js')}}"></script>

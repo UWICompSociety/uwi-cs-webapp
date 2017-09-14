@@ -1,29 +1,48 @@
 {% extends 'admin/master.html' %}
 
 {% block body %}
+{% if current_user.status == 'admin' %}
 {{ super() }}
-  <div>
-  	<h1>Hello Admin User</h1>
-  	<p>From here you have control of the entire application. The following tabs <b>About, News, Carousel, Project, Person</b> are used as content management.</p>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-10 col-sm-offset-1">
+        <div>
+          <h1>Hello Admin User</h1>
+          <p>From here you have control of the entire application. The following tabs <b>About, News, Carousel, Project, Person</b> are used as content management.</p>
+        </div>
+        <div>
+          <h1>Description</h1>
+          <hr>
+          <h2 class="lead">About</h2>
+          <p>This is where th Mission Statement is written. PLease write only one Mission Statement and Please use <b>Punctuations</b>.</p>
+
+          <h2 class="lead">News</h2>
+          <p>Tclass="lead"he News section contains a <b>Title, Detail and Image</b> fields. Please provide information for the Title and Detail fields if no image is provided there will be an no image provide image when the imformation is displayed.</p>
+
+          <h2 class="lead">Carousel</h2>
+          <p>The Carousel section contains a <b>Name, Description and Image</b> fields. Please provide information for all three fields. <b>NOTE please reframe from making the description too long.</b></p>
+
+          <h2 class="lead">Project</h2>
+          <p>The Project section contains a <b>Pro Name, Detail and Image</b> fields. Please provide information for the Pro Name and Detail fields if no image is provided there will be an no image provide image when the imformation is displayed.</p>
+
+          <h2 class="lead">Person</h2>
+          <p>This is where the information is keep for all the persons that signed up for this application. <b>There is a field called Status it distinguish a normal user and an admin user</b>.</p>
+        </div>
+        <div>
+          <a class="btn btn-primary" href="{{ url_for('site.index') }}"><i class="glyphicon glyphicon-chevron-left"></i> Back</a>
+        </div>
+      </div>
+    </div>
   </div>
+  {% else %}
+
+  <h1>Forbidden</h1>
+
+  <p>You don't have the permission to access the requested resource. It is either read-protected or not readable by the server.</p>
+
   <div>
-  	<h1>Discribtion</h1>
-    <h2>About</h2>
-  	<p>This is where th Mission Statement is written. PLease write only one Mission Statement and Please use <b>Punctuations</b>.</p>
-
-    <h2>News</h2>
-    <p>The News section contains a <b>Title, Detail and Image</b> fields. Please provide information for the Title and Detail fields if no image is provided there will be an no image provide image when the imformation is displayed.</p>
-
-    <h2>Carousel</h2>
-    <p>The Carousel section contains a <b>Name, Description and Image</b> fields. Please provide information for all three fields. <b>NOTE please reframe from making the description too long.</b></p>
-
-    <h2>Project</h2>
-    <p>The Project section contains a <b>Pro Name, Detail and Image</b> fields. Please provide information for the Pro Name and Detail fields if no image is provided there will be an no image provide image when the imformation is displayed.</p>
-
-    <h2>Person</h2>
-    <p>This is where the information is keep for all the persons that signed up for this application. <b>There is a field called Status it distinguish a normal user and an admin user</b>.</p>
+    <a class="btn btn-primary" href="{{ url_for('site.index') }}"><i class="glyphicon glyphicon-chevron-left"></i> Back</a>
   </div>
-  <div>
-  	<button><a href="{{ url_for('site.index') }}">Back</a></button>
-  </div>
+
+  {% endif %}
 {% endblock body %}

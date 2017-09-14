@@ -1,0 +1,33 @@
+{% extends 'index.html' %}
+
+{% block main %}
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="center col-xs-12 col-sm-12 col-md-12 col-lg-12 col-sl-12">
+					<div class="news-content">
+						<h4>Latest News</h4>
+						<p>Let's look at the lastest things the Computing Society has been up to.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				{% for news in news_list %}
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-sl-12">
+					{% if news.image is not none %}
+						<div class="news-lg-img" style="background-image: url({{ url_for('static', filename='uploads/' + news.image)  }});"></div>
+					{% else %}
+						<div class="news-lg-img" style="background-image: url('../static/assets/img/no-thumb.jpg')"></div>
+					{% endif %}
+						<div class="thumbnail-image img-space">
+							<h1>{{ news.title }}</h1>
+							<h6>{{ news.detail }}</h6>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+{% endblock %}

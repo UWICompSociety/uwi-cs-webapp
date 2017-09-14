@@ -26,4 +26,14 @@ $(document).ready(function() {
 			$('#sign-in-tab').addClass('tab-plane-selected-left');
 		}
 	});
+
+	$('#hamberger').click(function() {
+		$('#hamberger').toggleClass('active');
+		if ($(this).hasClass('active')) {
+			$('header').addClass('header');
+		}
+		else {
+			$('header').removeClass('header');
+		}
+	});
 });
