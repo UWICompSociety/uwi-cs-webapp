@@ -1,7 +1,7 @@
 import os
 
 from app import db, app, login_manager
-from flask import url_for
+from flask import url_for, flash
 from flask_admin import BaseView, expose, AdminIndexView, form
 from flask_login import current_user
 from jinja2 import Markup
@@ -14,6 +14,8 @@ file_path = app.config['UPLOAD_FOLDER']
 class MyModelView(sqla.ModelView):
 
 	def is_accessible(self):
+		print(current_user.firstname)
+		flash('User logged in ' + current_user.firstname)
 		return current_user.status == "admin"
 
 class MyView(AdminIndexView):
